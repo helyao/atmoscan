@@ -9,4 +9,3 @@ class BackEnd(htmlPy.Object):
     @htmlPy.Slot()
     def say_hello_world(self):
         self.app.html = u"Hello World"
-        
