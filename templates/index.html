@@ -1,25 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="{{ 'css/bootstrap.min.css'|staticfile }}">
-</head>
-<body>
-    <div class="container">
-		<div class="page-header">
-			<h1 class="text-danger">Kurento RTSP to WebRTC player</h1>
-		</div>
-        <div class="row">
-            <div class="col-md-6"></div>
-            <div class="col-md-6">
-                <a href="BackEnd.say_hello_world" data-bind="true">
-                    Click to say "Hello, world"
-                </a>
+{% extends "base.html" %}
+{% block head %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ 'css/index.css'|staticfile }}">
+{% endblock %}
+{% block content %}
+<div class="container-fluid">
+    <div id="myCarousel" class="carousel slide">
+      <div class="carousel-inner">
+        <div class="active item">
+            <img src="holder.js/1920x992?theme=sky&text=HelloPage">
+            <div class="carousel-caption">
+                <h1>无人机空气质量检测</h1>
+                <p>六大空气污染物(<em>NO<sub>2</sub>, SO<sub>2</sub>, CO, O<sub>3</sub>,
+                    PM10, PM2.5 </em>),温度, 湿度, GPS坐标, 高程信息。
+                    提供数据存储, 数据导入导出, 数据可视化等功能。</p>
             </div>
         </div>
+        <div class="item">
+            <img src="holder.js/1920x992?theme=vine&text=OnlineCollection">
+        </div>
+        <div class="item">
+            <img src="holder.js/1920x992?theme=lava&text=PostProcessing">
+        </div>
+      </div>
+      <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+      <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
     </div>
-</body>
-<script src="{{ 'js/jquery-2.2.3.min.js'|staticfile }}"></script>
-<script src="{{ 'js/bootstrap.min.js'|staticfile }}"></script>
-<script src="{{ 'js/echarts.min.js'|staticfile }}"></script>
-</html>
+</div>
+{% endblock %}
+{% block script %}
+    {{ super() }}
+    <script src="{{ 'js/index.js'|staticfile }}"></script>
+{% endblock %}

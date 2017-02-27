@@ -1,0 +1,2 @@
+// bootstrap carousel 
+$('.carousel').carousel()

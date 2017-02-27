@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ 'css/bootstrap.min.css'|staticfile }}">
+</head>
+<body>
+    <div class="container">
+		<div class="page-header">
+			<h1 class="text-danger">Kurento RTSP to WebRTC player</h1>
+		</div>
+        <div class="row">
+            <div class="col-md-6">
+                <input type="text" id="left">
+            </div>
+            <div class="col-md-6">
+                <a href="BackEnd.say_hello_world" data-bind="true">
+                    Click to say "Hello, world"
+                </a>
+                <button type="button" id="right">
+                    Click to change 'Left' content
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="{{ 'js/jquery-2.2.3.min.js'|staticfile }}"></script>
+<script src="{{ 'js/bootstrap.min.js'|staticfile }}"></script>
+<script src="{{ 'js/echarts.min.js'|staticfile }}"></script>
+<script>
+    $("#right").click(function() {
+        //var data = ClassOne.get_json();
+        var data = BackEnd.return_demo_json();
+        $("#left").val(data);
+    })
+</script>
+</html>
